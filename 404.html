@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    (function() {
+      // Get the current path, query string, and hash
+      const path = window.location.pathname + window.location.search + window.location.hash;
+      // Build the new URL on csng.cs.toronto.edu
+      const newUrl = 'https://csng.cs.toronto.edu' + path;
+      // Redirect immediately
+      window.location.replace(newUrl);
+    })();
+  </script>
+</head>
+<body>
+  <p>If you are not redirected automatically, <a id="redirect-link" href="#">click here</a>.</p>
+  <script>
+    // Set the link as a fallback for users without JS
+    document.getElementById('redirect-link').href =
+      'https://csng.cs.toronto.edu' + window.location.pathname + window.location.search + window.location.hash;
+  </script>
+</body>
+</html>
